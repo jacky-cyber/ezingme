@@ -8,21 +8,46 @@
     <meta name="mobile-web-app-capable" content="yes">
 
 	<link rel="stylesheet" type="text/css" href="../static-assets/semantic-ui/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="../static-assets/ezing/main.css">
     <script src="../static-assets/jquery/jquery.min.js"></script>
     <script src="../static-assets/semantic-ui/semantic.min.js"></script>
 
     <title>易致－eZing</title>
+
+    <style>
+* {
+	margin: 0;
+}
+html, body {
+	background-color: #FFFFFF;
+	height: 100%;
+ 	margin-top: 45px;
+}
+#wrapper {
+	min-height: 100%;
+}
+#wrapper:after {
+	content: "";
+	display: block;
+}
+#navbar{
+	background-color: #FFFFFF; padding: 5px; width: 100%; z-index: 1001;position: fixed; top:0;
+}
+#footer, #wrapper:after {
+	/*            height: 250px;*/
+}
+
+</style>
 </head>
 	<body>
-		<div class="pusher">
-		    <!-- Site content !-->
-		    <div id="menu" class="ui secondary pointing invert fixed menu grid">
+		<!-- Menu -->
+		<div id="wrapper">
+		<div id="navbar">
+		<div id="menu" class="ui gray secondary menu grid"  >
 			<div class="ui container computer tablet only row">
 				<a href="#banner" class="item">首页</a>
-				<a href="#banner" class="item">系统特色</a>
+				<a href="#banner" class="item">系统介绍</a>
 				<a href="#banner" class="item">手机版下载</a>
-				<a href="#banner" class="item">博客</a>
+				<a href="#banner" class="item">官方博客</a>
 
 				<div class="right menu">
 						<a class="ui item">注册 </a>
@@ -30,77 +55,44 @@
 					</div>
 			</div>
 
-			<div id="show-sidebar" class="ui container mobile only row">
-				<a class="mobile-menu-button right item"><i class="content icon"></i></a>
+			<div class="mobile only row" style="padding:0;">
+				<div class="item">
+    				<img src="../static-assets/ezing/images/logo-35@3.png">
+  				</div>
+				
+				<div class="right menu">
+					<div class="ui icon top right pointing dropdown item" >
+						<i class="blue content icon"></i>
+						<div class="menu">
+							<a class="item" href="/">首页</a>
+							<a class="item" href="/">注册</a>
+							<a class="item" href="/">登录</a>
+							<a class="item" href="/">系统介绍</a>
+							<a class="item" href="/">官方博客</a>
+							<div class="ui divider"></div>
+							<a class="item" href="/contact/">联系我们</a>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			
 
 		</div>
-		</div>
-		<!-- Menu -->
 
-		
+	<div class="ui divider" style="margin: -10px;"></div>
+	
+	</div>
 
-		<div class="ui right  vertical  sidebar labeled icon menu">
-      <a class="item" href="./main_page.html">
-        <i class="home icon"></i>
-        Home
-      </a>
-      <a class="item" href="crud.html">
-        <i class="university icon"></i>
-          Crud
+</div>
 
-      </a>
-      <a class="item" href="./semester_list.html">
-        <i class="book icon"></i>
-        Courses
-      </a>
-
-      <a class="item" href="./grades.html">
-        <i class="student icon"></i>
-        Grades
-      </a>
-      <a class="item">
-        <i class="calendar icon"></i>
-          Calendar
-
-      </a>
-      <a class="item" href="search.html">
-        <i class="search icon"></i>
-          Search
-
-      </a>
-        <a class="item" href="inbox.html">
-        <i class="inbox icon"></i>
-          Inbox
-
-      </a>
-    </div>
 			
 		
-	<script>
-		  $(document).ready(function() {
-		        //$('.ui.labeled.icon.sidebar')
-		        //          .sidebar('toggle')
-		        //   ;
-
-		  })
-		$(document).click(function(e){
-		    if(e.pageX<50)
-
-		        $('.ui.labeled.icon.sidebar')
-		                  .sidebar('toggle')
-		          ;
-
-		});
-
-		$('#show-sidebar').click(function() {
-		      $('.ui.labeled.icon.sidebar')
-		                  .sidebar('toggle')
-		          ;
-		});
-
+	<script text="text/javascript">
+		$(document).ready(function () {
+			$('.ui.dropdown')
+			.dropdown()
+			;
+		})
 	</script>
 	</body>
 </html>
