@@ -9,83 +9,98 @@
 
 	<link rel="stylesheet" type="text/css" href="../static-assets/semantic-ui/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../static-assets/ezing/main.css">
-	  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
     <script src="../static-assets/jquery/jquery.min.js"></script>
     <script src="../static-assets/semantic-ui/semantic.min.js"></script>
+
+    <title>易致－eZing</title>
 </head>
-<body>
-<div id="header">
+	<body>
+		<div class="pusher">
+		    <!-- Site content !-->
+		    <div id="menu" class="ui secondary pointing invert fixed menu grid">
+			<div class="ui container computer tablet only row">
+				<a href="#banner" class="item">首页</a>
+				<a href="#banner" class="item">系统特色</a>
+				<a href="#banner" class="item">手机版下载</a>
+				<a href="#banner" class="item">博客</a>
 
-	<div class="ui grid container">
-	<div id="navbar" class="ui fixed inverted  borderless menu computer tablet only row">
- <a class="active item">易致 </a>
-				<a class="item">消息 </a>
-				<a class="item">好友 </a>
-				<a class="item">消息 </a>
-				<a class="item">好友 </a>
 				<div class="right menu">
-					<a class="ui item">登出 </a>
-				</div>
-	</div>
-</div>
-<div id="content" class="ui container">
- <!-- main content here -->   
-</div>
-	<div class="color-line"></div>
-	<div class="ui grid container">
-		<div class="ui text menu computer tablet only row">
-		        <a class="active item">易致 </a>
-				<a class="item">消息 </a>
-				<a class="item">好友 </a>
-				<a class="item">消息 </a>
-				<a class="item">好友 </a>
-				<div class="right menu">
-					<a class="ui item">登出 </a>
-				</div>
-		</div>
-	</div>
-
-	<div class="ui grid container">
-		<div class="ui text menu mobile only narrow row">
-				<div class="right menu">
-					<a href="" class="menu item">
-                        <i class="content icon"></i>
-                    </a>
-
-				</div>
-
-		</div>
-	</div>
-</div>
-<div class="ui divider"></div>
-
-
-
-	
-
-		<div class="ui centered card">
-			<div class="content">
-				<form  action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="ui form">
-				  <div class="field">
-				    <label>电子邮件</label>
-				    <input type="text" name="first-name" placeholder="请输入电子邮件">
-				  </div>
-				  <div class="field">
-				    <label>密码</label>
-				    <input type="text" name="last-name" placeholder="请输入密码">
-				  </div>
-				  <div class="field">
-				    <div class="ui checkbox">
-				      <input type="checkbox"  >
-				      <label>记住我</label>
-				    </div>
-				  </div>
-				  <button class="green fluid ui button" type="submit">登录</button>
-				</form>
+						<a class="ui item">注册 </a>
+						<a class="ui item">登录 </a>
+					</div>
 			</div>
+
+			<div id="show-sidebar" class="ui container mobile only row">
+				<a class="mobile-menu-button right item"><i class="content icon"></i></a>
+			</div>
+
+			
+
 		</div>
+		</div>
+		<!-- Menu -->
 
+		
 
-	<script src="../static-assets/ezing/main.js"></script>
-</body>
+		<div class="ui right  vertical  sidebar labeled icon menu">
+      <a class="item" href="./main_page.html">
+        <i class="home icon"></i>
+        Home
+      </a>
+      <a class="item" href="crud.html">
+        <i class="university icon"></i>
+          Crud
+
+      </a>
+      <a class="item" href="./semester_list.html">
+        <i class="book icon"></i>
+        Courses
+      </a>
+
+      <a class="item" href="./grades.html">
+        <i class="student icon"></i>
+        Grades
+      </a>
+      <a class="item">
+        <i class="calendar icon"></i>
+          Calendar
+
+      </a>
+      <a class="item" href="search.html">
+        <i class="search icon"></i>
+          Search
+
+      </a>
+        <a class="item" href="inbox.html">
+        <i class="inbox icon"></i>
+          Inbox
+
+      </a>
+    </div>
+			
+		
+	<script>
+		  $(document).ready(function() {
+		        //$('.ui.labeled.icon.sidebar')
+		        //          .sidebar('toggle')
+		        //   ;
+
+		  })
+		$(document).click(function(e){
+		    if(e.pageX<50)
+
+		        $('.ui.labeled.icon.sidebar')
+		                  .sidebar('toggle')
+		          ;
+
+		});
+
+		$('#show-sidebar').click(function() {
+		      $('.ui.labeled.icon.sidebar')
+		                  .sidebar('toggle')
+		          ;
+		});
+
+	</script>
+	</body>
 </html>
